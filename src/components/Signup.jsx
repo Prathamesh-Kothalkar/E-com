@@ -1,10 +1,12 @@
 import { ArrowRightAlt } from "@mui/icons-material";
 import { TextField } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function SignUp() {
+    const navigate= useNavigate();
     return (
         <>
-            <div className="w-full h-screen bg-gray-900 p-5 flex justify-center items-center">
+            <div className="w-full h-screen bg-customDark p-5 flex justify-center items-center">
                 <div className="w-full max-w-md rounded-md bg-white p-6">
                     <div className="mt-5 flex justify-center">
                         <img src="https://cdn.shopify.com/s/files/1/0745/0201/3236/files/simply-otp-login-banner.png?v=1680004048"
@@ -34,7 +36,9 @@ export default function SignUp() {
                                 </div>
                             </div>
                             <div className="">
-                            <button className="w-full p-2 mt-4 bg-gray-800 peer text-white flex items-center justify-center rounded-md">
+                            <button 
+                            onClick={()=>{navigate("/mycart")}}
+                            className="w-full p-2 mt-4 bg-gray-800 peer text-white flex items-center justify-center rounded-md">
                         UPDATE <ArrowRightAlt className="ml-2 hover:translate-x-1 " />
                     </button>
                             </div>

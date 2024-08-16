@@ -1,16 +1,17 @@
 import { ArrowRightAlt, ExpandMore } from "@mui/icons-material";
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
     const [isCountryCodeOpen, setCountryCodeOpen] = useState(false);
-
+    const navigate = useNavigate();
     const toggleDropdown = () => {
         setCountryCodeOpen(!isCountryCodeOpen);
     };
 
     return (
-        <div className="w-full h-screen bg-gray-900 p-5 flex justify-center items-center">
-            <div className="w-full max-w-md rounded-md bg-white p-6">
+        <div className="w-full h-auto bg-customDark p-9 flex justify-center items-center">
+            <div className="w-full max-w-md rounded-md bg-white p-3">
                 <div className="mt-5 flex justify-center">
                     <img src="https://cdn.shopify.com/s/files/1/0745/0201/3236/files/simply-otp-login-banner.png?v=1680004048" 
                         alt="Login Banner" 
@@ -46,7 +47,9 @@ export default function Login() {
                             className="p-1  border-black border-l-2 focus:outline-none "
                         />
                     </div>
-                    <button className="w-full p-2 mt-3 bg-gray-800 peer text-white flex items-center justify-center rounded-md">
+                    <button 
+                    onClick={()=>{navigate("/verify")}}
+                    className="w-full p-2 mt-5 mb-3 bg-btnbg text-white flex items-center justify-center rounded-md">
                         REQUEST OTP <ArrowRightAlt className="ml-2 hover:translate-x-1 " />
                     </button>
                 </div>

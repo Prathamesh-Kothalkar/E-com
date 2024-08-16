@@ -20,7 +20,7 @@ export default function Navbar() {
 
 
     return <>
-        <header className="bg-black text-white">
+        <header className=" bg-customDarker text-white">
             <nav className="flex justify-between items-center p-4 max-w-7xl mx-auto">
 
                 <div className="text-2xl font-bold">
@@ -38,7 +38,7 @@ export default function Navbar() {
                             Products {isDropdownOpen ? <ArrowUpward /> : <ArrowDownward />}
                         </button>
                         {isDropdownOpen && (
-                            <div className="absolute left-0 mt-2 w-60 text-black rounded-md shadow-lg z-20 bg-black">
+                            <div className="absolute left-0 mt-2 w-60 text-black rounded-md shadow-lg z-20 bg-customDarker">
                                 <div className="grid grid-cols-3 p-2 m-2 ">
                                     <a href="#" className="hover:bg-gray-800 text-white p-1">Product 1</a>
                                     <a href="#" className="hover:bg-gray-800 text-white p-1">Product 2</a>
@@ -62,7 +62,7 @@ export default function Navbar() {
                     <ShoppingCart className="hover:text-gray-400 cursor-pointer mt-1" />
 
                     {/* Avatar and Dropdown */}
-                    <div className='relative flex items-center cursor-pointer hover:bg-blue-600 rounded-md p-2' onClick={() => { setIsSubNavOpen(!isSubNavOpen) }}>
+                    <div className='relative flex items-center cursor-pointer hover:bg-customDark rounded-md p-2' onClick={() => { setIsSubNavOpen(!isSubNavOpen) }}>
                         <Avatar className='w-9 h-9' />
                         <span className="hover:text-gray-400 text-md mx-2">Login {isSubNavOpen ? <ExpandLess /> : <ExpandMore />}</span>
 
@@ -71,10 +71,10 @@ export default function Navbar() {
 <                            div className="absolute top-full right-0 mt-2 w-48 text-white rounded-md shadow-lg z-20 bg-black">
                                 <div className="grid grid-cols-1 p-2">
                                    <ul>
-                                    <li className='hover:bg-gray-800 text-white p-1'><a href=""> New Customer Sign up</a></li>
-                                    <li className='hover:bg-gray-800 text-white p-1'><hr /></li>
-                                    <li className='hover:bg-gray-800 text-white p-1'>My Account</li>
-                                    <li className='hover:bg-gray-800 text-white p-1'>Wishlist</li>
+                                    <li className=' bg-customDarker hover:bg-gray-800 text-white text-sm p-1 m-1'><a href=""> New Customer Sign up</a></li>
+                                    <li className='bg-customDarker hover:bg-gray-800 text-white p-1'><hr /></li>
+                                    <li className='bg-customDarker hover:bg-gray-800 text-white p-1 m-1'>My Account</li>
+                                    <li className='bg-customDarker hover:bg-gray-800 text-white p-1 m-1'>Wishlist</li>
                                    </ul>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@ export default function Navbar() {
                 leaveFrom="translate-x-0"
                 leaveTo="-translate-x-full"
             >
-                <div className={`fixed top-0 left-0 w-64 h-full bg-black p-4 z-50 ${isOpen ? 'block' : 'hidden'}`}>
+                <div className={`fixed top-0 left-0 w-64 h-full bg-customDark p-4 z-50 ${isOpen ? 'block' : 'hidden'}`}>
                     <div className="flex justify-end">
                         <Close className="cursor-pointer" onClick={toggleMenu} />
                     </div>
