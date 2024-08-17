@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Menu, Close, Search, ShoppingCart, ArrowDownward, ArrowUpward, ExpandMore, ExpandLess } from '@mui/icons-material';
 import { Transition } from '@headlessui/react';
 import { Avatar } from '@mui/material';
-import Cart from './Cart'; // Import the Cart component
+import Cart from './Cart'; 
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,7 @@ export default function Navbar() {
     };
 
     const toggleCart = () => {
-        setIsCartOpen(!isCartOpen); // Toggle cart visibility
+        setIsCartOpen(!isCartOpen);
     };
 
     return (

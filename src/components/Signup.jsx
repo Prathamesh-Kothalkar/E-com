@@ -37,7 +37,7 @@ export default function SignUp() {
                             </div>
                             <div className="">
                             <button 
-                            onClick={()=>{navigate("/mycart")}}
+                            onClick={()=>{navigate("/account")}}
                             className="w-full p-2 mt-4 bg-gray-800 peer text-white flex items-center justify-center rounded-md">
                         UPDATE <ArrowRightAlt className="ml-2 hover:translate-x-1 " />
                     </button>

@@ -10,6 +10,7 @@ import VerifyOtp from './components/VerifyOtp'
 import SignUp from './components/Signup'
 import Cart from './components/Cart'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Account from './components/Account'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,6 +29,7 @@ function App() {
           <Route path='/' element={<Login/>}/>
           <Route path='/verify' element={<VerifyOtp/>}/>
           <Route path='/signup' element={<SignUp/>}/>
+          <Route path='/account' element={<Account/>}/>
           <Route path='/mycart' element={<Cart/>}/>
         </Routes>
       </BrowserRouter>
